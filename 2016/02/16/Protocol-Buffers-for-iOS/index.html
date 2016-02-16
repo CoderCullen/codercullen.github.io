@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo," />
+  <meta name="keywords" content="Protocol Buffers,iOS," />
 
 
 
@@ -57,19 +57,25 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="Protocol Buffers 是 Google 出品的用来序列化/反序列化数据的工具。原生支持 C++、Java、Python。
+如果要在 iOS 上使用 PB，可以直接使用 C++，但是编译过程很麻烦，因此这里使用的是第三方的库。
+安装 Protocol Buffers• 安装 homebrew
+1ruby -e &amp;#34;$(curl -fsSL https://raw.githubuse">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/02/15/hello-world/index.html">
+<meta property="og:title" content="Protocol Buffers for iOS">
+<meta property="og:url" content="http://yoursite.com/2016/02/16/Protocol-Buffers-for-iOS/index.html">
 <meta property="og:site_name" content="C-Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-02-16T03:45:19.000Z">
+<meta property="og:description" content="Protocol Buffers 是 Google 出品的用来序列化/反序列化数据的工具。原生支持 C++、Java、Python。
+如果要在 iOS 上使用 PB，可以直接使用 C++，但是编译过程很麻烦，因此这里使用的是第三方的库。
+安装 Protocol Buffers• 安装 homebrew
+1ruby -e &amp;#34;$(curl -fsSL https://raw.githubuse">
+<meta property="og:updated_time" content="2016-02-16T04:35:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="Protocol Buffers for iOS">
+<meta name="twitter:description" content="Protocol Buffers 是 Google 出品的用来序列化/反序列化数据的工具。原生支持 C++、Java、Python。
+如果要在 iOS 上使用 PB，可以直接使用 C++，但是编译过程很麻烦，因此这里使用的是第三方的库。
+安装 Protocol Buffers• 安装 homebrew
+1ruby -e &amp;#34;$(curl -fsSL https://raw.githubuse">
 
 
 
@@ -87,7 +93,7 @@ Quick">
   };
 </script>
 
-  <title> Hello World | C-Blog </title>
+  <title> Protocol Buffers for iOS | C-Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -217,7 +223,7 @@ Quick">
             
             
               
-                Hello World
+                Protocol Buffers for iOS
               
             
           </h1>
@@ -229,8 +235,8 @@ Quick">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2016-02-15T00:00:00+08:00" content="2016-02-15">
-              2016-02-15
+            <time itemprop="dateCreated" datetime="2016-02-16T11:47:18+08:00" content="2016-02-16">
+              2016-02-16
             </time>
           </span>
 
@@ -243,8 +249,8 @@ Quick">
               <span class="post-meta-item-text">分類於</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/blog/" itemprop="url" rel="index">
-                    <span itemprop="name">blog</span>
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
                   </a>
                 </span>
 
@@ -274,16 +280,31 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        <p>Protocol Buffers 是 Google 出品的用来序列化/反序列化数据的工具。原生支持 C++、Java、Python。</p>
+<p>如果要在 iOS 上使用 PB，可以直接使用 C++，但是编译过程很麻烦，因此这里使用的是第三方的库。</p>
+<h1 id="安装-Protocol-Buffers"><a href="#安装-Protocol-Buffers" class="headerlink" title="安装 Protocol Buffers"></a>安装 Protocol Buffers</h1><p>• 安装 homebrew</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34;</span><br></pre></td></tr></table></figure>
+<p>• 安装 automake、libtool、protobuf。这里安装的 protobuf 是 google 官方版本。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install automake&#10;&#10;brew install libtool&#10;&#10;brew install protobuf</span><br></pre></td></tr></table></figure>
+<p>如果后面的步骤出错了，请确保已经安装了这些工具：automake、autoconf、autoreconf、aclocal、libtool、protoc。其中的 protoc 用来把 .proto 文件编译成 C++、Java 或 Python 代码。</p>
+<p>• 编译 protoc-gen-objc。protoc-gen-objc 是 protoc 的一个插件，使其能将 .proto 文件编译成 objective-c 代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:alexeyxo/protobuf-objc.git &#10;                 &#10;cd protobuf-objc  &#10;                                       &#10;./autogen.sh&#10;&#10;//&#21518;&#38754;&#30340;&#21442;&#25968;&#20445;&#35777; configure &#33021;&#25214;&#21040; protobuf &#30456;&#20851;&#30340;&#22836;&#25991;&#20214;&#21644;&#24211;&#10;//&#36991;&#20813;&#25253; protobuf headers are required &#38169;&#35823;&#10;&#10;./configure CXXFLAGS=-I/usr/local/include LDFLAGS=-L/usr/local/lib&#10;&#10;make&#10;&#10;make install</span><br></pre></td></tr></table></figure>
+<p>• 利用 protoc 将 .proto 文件编译成 objective-c 代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">protoc message.proto --objc_out=&#34;.&#34;</span><br></pre></td></tr></table></figure>
+<p>如果出现下面的错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">protoc-gen-objc: program not found or is not executable&#10;--objc_out: protoc-gen-objc: Plugin failed with status code 1.</span><br></pre></td></tr></table></figure>
+<p>可以尝试：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /PATH/TO/protobuf-objc/src/compiler/protoc-gen-objc /usr/local/bin</span><br></pre></td></tr></table></figure>
+<p>• 在 Podfile 中添加  pod ‘ProtocolBuffers’, ‘1.9.2’ 然后执行  pod install 。</p>
+<p>• 将生成的 .h 和 .m 文件添加到工程中，编译。</p>
+<p>这里会提示找不到  GeneratedMessageProtocol 。你只需要帅气地将其注释掉就行了。</p>
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>假设有 person.proto 定义如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">message Person &#123;&#10;  required int32 id = 1;&#10;  required string name = 2;&#10;  optional string email = 3;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<p>通过 protoc 生成 Person.pb.h 和 Person.pb.m 两个文件。</p>
+<p>• 序列化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Person* person = [[[[[Person builder] setId:123]&#10;                                    setName:@&#34;Bob&#34;]&#10;                                  setEmail:@&#34;bob@example.com&#34;] build];&#10;NSData* data = [person data];</span><br></pre></td></tr></table></figure>
+<p>• 反序列化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSData* raw_data = ...;&#10;Person* person = [Person parseFromData:raw_data];</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -291,7 +312,9 @@ Quick">
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+            <a href="/tags/Protocol-Buffers/" rel="tag">#Protocol Buffers</a>
+          
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
           
         </div>
       
@@ -300,13 +323,13 @@ Quick">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/02/15/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/16/Protocol-Buffers-for-iOS/" rel="prev" title="Protocol Buffers for iOS">
-                Protocol Buffers for iOS <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -424,7 +447,7 @@ Quick">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装-Protocol-Buffers"><span class="nav-number">1.</span> <span class="nav-text">安装 Protocol Buffers</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用方法"><span class="nav-number">2.</span> <span class="nav-text">使用方法</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

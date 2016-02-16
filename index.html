@@ -199,15 +199,132 @@
 
     
     
+
+    
       
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/16/Protocol-Buffers-for-iOS/" itemprop="url">
+                  Protocol Buffers for iOS
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-02-16T11:47:18+08:00" content="2016-02-16">
+              2016-02-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-        
-        
-        
       
 
       
-    
+        
+          
+            <p>Protocol Buffers 是 Google 出品的用来序列化/反序列化数据的工具。原生支持 C++、Java、Python。</p>
+<p>如果要在 iOS 上使用 PB，可以直接使用 C++，但是编译过程很麻烦，因此这里使用的是第三方的库。</p>
+<h1 id="安装-Protocol-Buffers"><a href="#安装-Protocol-Buffers" class="headerlink" title="安装 Protocol Buffers"></a>安装 Protocol Buffers</h1><p>• 安装 homebrew</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34;</span><br></pre></td></tr></table></figure>
+<p>• 安装 automake、libtool、protobuf。这里安装的 protobuf 是 google 官方版本。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install automake&#10;&#10;brew install libtool&#10;&#10;brew install protobuf</span><br></pre></td></tr></table></figure>
+<p>如果后面的步骤出错了，请确保已经安装了这些工具：automake、autoconf、autoreconf、aclocal、libtool、protoc。其中的 protoc 用来把 .proto 文件编译成 C++、Java 或 Python 代码。</p>
+<p>• 编译 protoc-gen-objc。protoc-gen-objc 是 protoc 的一个插件，使其能将 .proto 文件编译成 objective-c 代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:alexeyxo/protobuf-objc.git &#10;                 &#10;cd protobuf-objc  &#10;                                       &#10;./autogen.sh&#10;&#10;//&#21518;&#38754;&#30340;&#21442;&#25968;&#20445;&#35777; configure &#33021;&#25214;&#21040; protobuf &#30456;&#20851;&#30340;&#22836;&#25991;&#20214;&#21644;&#24211;&#10;//&#36991;&#20813;&#25253; protobuf headers are required &#38169;&#35823;&#10;&#10;./configure CXXFLAGS=-I/usr/local/include LDFLAGS=-L/usr/local/lib&#10;&#10;make&#10;&#10;make install</span><br></pre></td></tr></table></figure>
+<p>• 利用 protoc 将 .proto 文件编译成 objective-c 代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">protoc message.proto --objc_out=&#34;.&#34;</span><br></pre></td></tr></table></figure>
+<p>如果出现下面的错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">protoc-gen-objc: program not found or is not executable&#10;--objc_out: protoc-gen-objc: Plugin failed with status code 1.</span><br></pre></td></tr></table></figure>
+<p>可以尝试：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /PATH/TO/protobuf-objc/src/compiler/protoc-gen-objc /usr/local/bin</span><br></pre></td></tr></table></figure>
+<p>• 在 Podfile 中添加  pod ‘ProtocolBuffers’, ‘1.9.2’ 然后执行  pod install 。</p>
+<p>• 将生成的 .h 和 .m 文件添加到工程中，编译。</p>
+<p>这里会提示找不到  GeneratedMessageProtocol 。你只需要帅气地将其注释掉就行了。</p>
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>假设有 person.proto 定义如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">message Person &#123;&#10;  required int32 id = 1;&#10;  required string name = 2;&#10;  optional string email = 3;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<p>通过 protoc 生成 Person.pb.h 和 Person.pb.m 两个文件。</p>
+<p>• 序列化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Person* person = [[[[[Person builder] setId:123]&#10;                                    setName:@&#34;Bob&#34;]&#10;                                  setEmail:@&#34;bob@example.com&#34;] build];&#10;NSData* data = [person data];</span><br></pre></td></tr></table></figure>
+<p>• 反序列化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSData* raw_data = ...;&#10;Person* person = [Person parseFromData:raw_data];</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -363,7 +480,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -371,7 +488,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分類</span>
               </a>
             </div>
@@ -380,7 +497,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">標籤</span>
               </a>
             </div>
