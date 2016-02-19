@@ -57,25 +57,16 @@
 
 
 
-<meta name="description" content="Protocol Buffers 是 Google 出品的用来序列化/反序列化数据的工具。原生支持 C++、Java、Python。
-如果要在 iOS 上使用 PB，可以直接使用 C++，但是编译过程很麻烦，因此这里使用的是第三方的库。
-安装 Protocol Buffers• 安装 homebrew
-ruby -e &amp;quot;$(curl -fsSL https://raw.githubuse">
+<meta name="description" content="Protocol Buffers &amp;#x662F; Google &amp;#x51FA;&amp;#x54C1;&amp;#x7684;&amp;#x7528;&amp;#x6765;&amp;#x5E8F;&amp;#x5217;&amp;#x5316;/&amp;#x53CD;&amp;#x5E8F;&amp;#x5217;&amp;#x5316;&amp;#x6570;&amp;#x636E;&amp;#x7684;&amp;#x5DE5;&amp;#x5177;&amp;#x3002;&amp;#x539F;&amp;#x751F;&amp;#x652">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Protocol Buffers for iOS">
 <meta property="og:url" content="http://yoursite.com/2016/02/16/Protocol-Buffers-for-iOS/index.html">
 <meta property="og:site_name" content="C-Blog">
-<meta property="og:description" content="Protocol Buffers 是 Google 出品的用来序列化/反序列化数据的工具。原生支持 C++、Java、Python。
-如果要在 iOS 上使用 PB，可以直接使用 C++，但是编译过程很麻烦，因此这里使用的是第三方的库。
-安装 Protocol Buffers• 安装 homebrew
-ruby -e &amp;quot;$(curl -fsSL https://raw.githubuse">
+<meta property="og:description" content="Protocol Buffers &amp;#x662F; Google &amp;#x51FA;&amp;#x54C1;&amp;#x7684;&amp;#x7528;&amp;#x6765;&amp;#x5E8F;&amp;#x5217;&amp;#x5316;/&amp;#x53CD;&amp;#x5E8F;&amp;#x5217;&amp;#x5316;&amp;#x6570;&amp;#x636E;&amp;#x7684;&amp;#x5DE5;&amp;#x5177;&amp;#x3002;&amp;#x539F;&amp;#x751F;&amp;#x652">
 <meta property="og:updated_time" content="2016-02-16T05:07:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Protocol Buffers for iOS">
-<meta name="twitter:description" content="Protocol Buffers 是 Google 出品的用来序列化/反序列化数据的工具。原生支持 C++、Java、Python。
-如果要在 iOS 上使用 PB，可以直接使用 C++，但是编译过程很麻烦，因此这里使用的是第三方的库。
-安装 Protocol Buffers• 安装 homebrew
-ruby -e &amp;quot;$(curl -fsSL https://raw.githubuse">
+<meta name="twitter:description" content="Protocol Buffers &amp;#x662F; Google &amp;#x51FA;&amp;#x54C1;&amp;#x7684;&amp;#x7528;&amp;#x6765;&amp;#x5E8F;&amp;#x5217;&amp;#x5316;/&amp;#x53CD;&amp;#x5E8F;&amp;#x5217;&amp;#x5316;&amp;#x6570;&amp;#x636E;&amp;#x7684;&amp;#x5DE5;&amp;#x5177;&amp;#x3002;&amp;#x539F;&amp;#x751F;&amp;#x652">
 
 
 
@@ -280,55 +271,55 @@ ruby -e &amp;quot;$(curl -fsSL https://raw.githubuse">
       
 
       
-        <p>Protocol Buffers 是 Google 出品的用来序列化/反序列化数据的工具。原生支持 C++、Java、Python。</p>
-<p>如果要在 iOS 上使用 PB，可以直接使用 C++，但是编译过程很麻烦，因此这里使用的是第三方的库。</p>
-<h1 id="安装-Protocol-Buffers"><a href="#安装-Protocol-Buffers" class="headerlink" title="安装 Protocol Buffers"></a>安装 Protocol Buffers</h1><p>• 安装 homebrew</p>
+        <p>Protocol Buffers &#x662F; Google &#x51FA;&#x54C1;&#x7684;&#x7528;&#x6765;&#x5E8F;&#x5217;&#x5316;/&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x6570;&#x636E;&#x7684;&#x5DE5;&#x5177;&#x3002;&#x539F;&#x751F;&#x652F;&#x6301; C++&#x3001;Java&#x3001;Python&#x3002;</p>
+<p>&#x5982;&#x679C;&#x8981;&#x5728; iOS &#x4E0A;&#x4F7F;&#x7528; PB&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528; C++&#xFF0C;&#x4F46;&#x662F;&#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;&#x5F88;&#x9EBB;&#x70E6;&#xFF0C;&#x56E0;&#x6B64;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x5E93;&#x3002;</p>
+<h1 id="&#x5B89;&#x88C5;-Protocol-Buffers"><a href="#&#x5B89;&#x88C5;-Protocol-Buffers" class="headerlink" title="&#x5B89;&#x88C5; Protocol Buffers"></a>&#x5B89;&#x88C5; Protocol Buffers</h1><p>&#x2022; &#x5B89;&#x88C5; homebrew</p>
 <pre><code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-</code></pre><p>• 安装 automake、libtool、protobuf。这里安装的 protobuf 是 google 官方版本。</p>
+</code></pre><p>&#x2022; &#x5B89;&#x88C5; automake&#x3001;libtool&#x3001;protobuf&#x3002;&#x8FD9;&#x91CC;&#x5B89;&#x88C5;&#x7684; protobuf &#x662F; google &#x5B98;&#x65B9;&#x7248;&#x672C;&#x3002;</p>
 <pre><code>brew install automake
 
 brew install libtool
 
 brew install protobuf
-</code></pre><p>如果后面的步骤出错了，请确保已经安装了这些工具：automake、autoconf、autoreconf、aclocal、libtool、protoc。其中的 protoc 用来把 .proto 文件编译成 C++、Java 或 Python 代码。</p>
-<p>• 编译 protoc-gen-objc。protoc-gen-objc 是 protoc 的一个插件，使其能将 .proto 文件编译成 objective-c 代码。</p>
+</code></pre><p>&#x5982;&#x679C;&#x540E;&#x9762;&#x7684;&#x6B65;&#x9AA4;&#x51FA;&#x9519;&#x4E86;&#xFF0C;&#x8BF7;&#x786E;&#x4FDD;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x4E86;&#x8FD9;&#x4E9B;&#x5DE5;&#x5177;&#xFF1A;automake&#x3001;autoconf&#x3001;autoreconf&#x3001;aclocal&#x3001;libtool&#x3001;protoc&#x3002;&#x5176;&#x4E2D;&#x7684; protoc &#x7528;&#x6765;&#x628A; .proto &#x6587;&#x4EF6;&#x7F16;&#x8BD1;&#x6210; C++&#x3001;Java &#x6216; Python &#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x2022; &#x7F16;&#x8BD1; protoc-gen-objc&#x3002;protoc-gen-objc &#x662F; protoc &#x7684;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;&#xFF0C;&#x4F7F;&#x5176;&#x80FD;&#x5C06; .proto &#x6587;&#x4EF6;&#x7F16;&#x8BD1;&#x6210; objective-c &#x4EE3;&#x7801;&#x3002;</p>
 <pre><code>git clone git@github.com:alexeyxo/protobuf-objc.git 
 
 cd protobuf-objc  
 
 ./autogen.sh
 
-//后面的参数保证 configure 能找到 protobuf 相关的头文件和库
-//避免报 protobuf headers are required 错误
+//&#x540E;&#x9762;&#x7684;&#x53C2;&#x6570;&#x4FDD;&#x8BC1; configure &#x80FD;&#x627E;&#x5230; protobuf &#x76F8;&#x5173;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x548C;&#x5E93;
+//&#x907F;&#x514D;&#x62A5; protobuf headers are required &#x9519;&#x8BEF;
 
 ./configure CXXFLAGS=-I/usr/local/include LDFLAGS=-L/usr/local/lib
 
 make
 
 make install
-</code></pre><p>• 利用 protoc 将 .proto 文件编译成 objective-c 代码。</p>
+</code></pre><p>&#x2022; &#x5229;&#x7528; protoc &#x5C06; .proto &#x6587;&#x4EF6;&#x7F16;&#x8BD1;&#x6210; objective-c &#x4EE3;&#x7801;&#x3002;</p>
 <pre><code>protoc message.proto --objc_out=&quot;.&quot;
-</code></pre><p>如果出现下面的错误：</p>
+</code></pre><p>&#x5982;&#x679C;&#x51FA;&#x73B0;&#x4E0B;&#x9762;&#x7684;&#x9519;&#x8BEF;&#xFF1A;</p>
 <pre><code>protoc-gen-objc: program not found or is not executable
 --objc_out: protoc-gen-objc: Plugin failed with status code 1.
-</code></pre><p>可以尝试：</p>
+</code></pre><p>&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#xFF1A;</p>
 <pre><code>cp /PATH/TO/protobuf-objc/src/compiler/protoc-gen-objc /usr/local/bin
-</code></pre><p>• 在 Podfile 中添加  pod ‘ProtocolBuffers’, ‘1.9.2’ 然后执行  pod install 。</p>
-<p>• 将生成的 .h 和 .m 文件添加到工程中，编译。</p>
-<p>这里会提示找不到  GeneratedMessageProtocol 。你只需要帅气地将其注释掉就行了。</p>
-<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>假设有 person.proto 定义如下</p>
+</code></pre><p>&#x2022; &#x5728; Podfile &#x4E2D;&#x6DFB;&#x52A0;  pod &#x2018;ProtocolBuffers&#x2019;, &#x2018;1.9.2&#x2019; &#x7136;&#x540E;&#x6267;&#x884C;  pod install &#x3002;</p>
+<p>&#x2022; &#x5C06;&#x751F;&#x6210;&#x7684; .h &#x548C; .m &#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x5DE5;&#x7A0B;&#x4E2D;&#xFF0C;&#x7F16;&#x8BD1;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x4F1A;&#x63D0;&#x793A;&#x627E;&#x4E0D;&#x5230;  GeneratedMessageProtocol &#x3002;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x5E05;&#x6C14;&#x5730;&#x5C06;&#x5176;&#x6CE8;&#x91CA;&#x6389;&#x5C31;&#x884C;&#x4E86;&#x3002;</p>
+<h1 id="&#x4F7F;&#x7528;&#x65B9;&#x6CD5;"><a href="#&#x4F7F;&#x7528;&#x65B9;&#x6CD5;" class="headerlink" title="&#x4F7F;&#x7528;&#x65B9;&#x6CD5;"></a>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h1><p>&#x5047;&#x8BBE;&#x6709; person.proto &#x5B9A;&#x4E49;&#x5982;&#x4E0B;</p>
 <pre><code>message Person {
   required int32 id = 1;
   required string name = 2;
   optional string email = 3;
 }
-</code></pre><p>通过 protoc 生成 Person.pb.h 和 Person.pb.m 两个文件。</p>
-<p>• 序列化</p>
+</code></pre><p>&#x901A;&#x8FC7; protoc &#x751F;&#x6210; Person.pb.h &#x548C; Person.pb.m &#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x2022; &#x5E8F;&#x5217;&#x5316;</p>
 <pre><code>Person* person = [[[[[Person builder] setId:123]
                                 setName:@&quot;Bob&quot;]
                               setEmail:@&quot;bob@example.com&quot;] build];
 NSData* data = [person data];
-</code></pre><p>• 反序列化</p>
+</code></pre><p>&#x2022; &#x53CD;&#x5E8F;&#x5217;&#x5316;</p>
 <pre><code>NSData* raw_data = ...;
 Person* person = [Person parseFromData:raw_data];
 </code></pre>
@@ -357,6 +348,10 @@ Person* person = [Person parseFromData:raw_data];
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/02/19/此证书的签发者无效的解决办法/" rel="prev" title="此证书的签发者无效的解决办法">
+                此证书的签发者无效的解决办法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -424,7 +419,7 @@ Person* person = [Person parseFromData:raw_data];
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
