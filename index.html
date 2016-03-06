@@ -118,7 +118,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle">QQ:949786685</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -199,6 +199,116 @@
 
     
     
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/06/原生应用中嵌入cocos2d游戏/" itemprop="url">
+                  原生应用中嵌入cocos2d游戏
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-03-06T14:19:19+08:00" content="2016-03-06">
+              2016-03-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="&#x9700;&#x6C42;&#x63CF;&#x8FF0;"><a href="#&#x9700;&#x6C42;&#x63CF;&#x8FF0;" class="headerlink" title="&#x9700;&#x6C42;&#x63CF;&#x8FF0;"></a>&#x9700;&#x6C42;&#x63CF;&#x8FF0;</h1><p>&#xA0;&#xA0;&#x4E00;&#x822C;&#x5728;&#x5E94;&#x7528;&#x4E2D;&#x5D4C;&#x5165;&#x6E38;&#x620F;&#xFF0C;&#x90FD;&#x662F;&#x4EE5;webview&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x52A0;&#x8F7D;H5&#x6E38;&#x620F;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x7684;&#x5B9E;&#x73B0;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x662F;H5&#x7684;&#x6E38;&#x620F;&#x4ECE;&#x6027;&#x80FD;&#x7684;&#x89D2;&#x5EA6;&#x4E0A;&#x6765;&#x8BF4;&#x662F;&#x4E0D;&#x5982;&#x539F;&#x751F;&#x6E38;&#x620F;&#x7684;&#xFF0C;&#x672C;&#x6587;&#x7684;&#x8981;&#x8BA8;&#x8BBA;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x5C06;cocos2d&#x539F;&#x751F;&#x6E38;&#x620F;&#x5D4C;&#x5165;&#x5E94;&#x7528;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<h1 id="&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;"><a href="#&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;" class="headerlink" title="&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;"></a>&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;</h1><p>&#x2022;&#xA0;&#xA0;cocos2d&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C06;&#x6E38;&#x620F;&#x7684;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x4F5C;&#x4E3A;&#x4E3B;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x5E76;&#x8C03;&#x8D77;cocos2d&#x7684;AppDelegate<br><img src="/2016/03/06/&#x539F;&#x751F;&#x5E94;&#x7528;&#x4E2D;&#x5D4C;&#x5165;cocos2d&#x6E38;&#x620F;/image.png" alt="source"><br>&#x2022;&#xA0;&#xA0;&#x9996;&#x5148;&#x6211;&#x4EEC;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x81EA;&#x5DF1;&#x7684;AppDelegate&#x7684;&#x6587;&#x4EF6;,&#x5C06;&#x7A0B;&#x5E8F;&#x5165;&#x53E3;&#x4FEE;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;AppDelegate<br><img src="/2016/03/06/&#x539F;&#x751F;&#x5E94;&#x7528;&#x4E2D;&#x5D4C;&#x5165;cocos2d&#x6E38;&#x620F;/image2.png" alt="source"><br>&#x2022;&#xA0;&#xA0;&#x63A5;&#x7740;&#x5728;&#x8FD9;&#x4E2A;AppDelegate&#x91CC;&#xFF0C;&#x5C06;&#x7A0B;&#x5E8F;&#x7684;&#x4E3B;&#x7A97;&#x53E3;&#x8BBE;&#x7F6E;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x6B64;&#x65F6;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5E38;&#x89C4;&#x5E94;&#x7528;&#x8F6F;&#x4EF6;&#x7684;&#x542F;&#x52A8;&#x65B9;&#x5F0F;&#x4E86;<br><img src="/2016/03/06/&#x539F;&#x751F;&#x5E94;&#x7528;&#x4E2D;&#x5D4C;&#x5165;cocos2d&#x6E38;&#x620F;/image3.png" alt="source"><br>&#x2022;&#xA0;&#xA0;&#x5F53;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C55;&#x73B0;&#x6E38;&#x620F;&#x9875;&#x9762;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x628A;&#x6E38;&#x620F;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;ViewController&#x5C55;&#x793A;&#x51FA;&#x6765;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x5BFC;&#x822A;&#x63A7;&#x5236;&#x5668;push&#x51FA;&#x4E00;&#x4E2A;&#x6E38;&#x620F;&#x754C;&#x9762;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x628A;ViewController.view&#x8986;&#x76D6;&#x5728;&#x5F53;&#x524D;&#x9875;&#x9762;&#xFF0C;&#x4EE5;&#x4E0B;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x7528;&#x7684;&#x662F;&#x7B2C;&#x4E8C;&#x79CD;<br><img src="/2016/03/06/&#x539F;&#x751F;&#x5E94;&#x7528;&#x4E2D;&#x5D4C;&#x5165;cocos2d&#x6E38;&#x620F;/image4.png" alt="source"><br>&#x2022;&#xA0;&#xA0;&#x9700;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;<br><br>&#xFF08;1&#xFF09;&#x5728;&#x9000;&#x51FA;&#x6E38;&#x620F;&#x65F6;&#xFF0C;&#x8981;&#x6682;&#x505C;&#x6E38;&#x620F;&#x7684;&#x8FD0;&#x884C;</p>
+<pre><code>cocos2d::Director::getInstance()-&gt;pause();
+</code></pre><p>&#x5728;&#x91CD;&#x65B0;&#x8FDB;&#x5165;&#x6E38;&#x620F;&#x65F6;&#xFF0C;&#x8981;&#x7EE7;&#x7EED;&#x6E38;&#x620F;&#x7684;&#x8FD0;&#x884C;</p>
+<pre><code>cocos2d::Director::getInstance()-&gt;resume();
+</code></pre><p>&#xFF08;2&#xFF09;&#x8981;&#x5C06;&#x63A7;&#x5236;&#x5668;&#x7C7B;&#x6587;&#x4EF6;&#x7684;.m&#x540E;&#x7F00;&#xFF0C;&#x6539;&#x4E3A;.mm&#xFF0C;&#x5E76;&#x4E14;&#x8981;&#x5BFC;&#x5165;&#x4EE5;&#x4E0B;&#x4F9D;&#x8D56;&#x5E93;&#x7684;&#x5934;&#x6587;&#x4EF6;</p>
+<pre><code>#import &quot;platform/ios/CCEAGLView-ios.h&quot;
+#import &quot;cocos2d.h&quot;
+</code></pre>
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -618,7 +728,7 @@ $ hexo deploy
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -635,7 +745,7 @@ $ hexo deploy
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">標籤</span>
               </a>
             </div>
